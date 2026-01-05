@@ -1,0 +1,5 @@
+var obj = JSON.parse($response.body);
+if (obj?.data?.user) {
+  obj.data.user.video_max_duration = 15;
+}
+$done({ body: JSON.stringify(obj) });
